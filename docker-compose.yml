@@ -16,7 +16,7 @@ services:
     volumes:
       - .:/var/www/html/
     ports:
-      - "89:89"
+      - "8081:80"
     networks:
       - php_kek
 
@@ -24,7 +24,7 @@ services:
     image: "mysql:8"
     restart: always
     environment:
-      MYSQL_ROOT-PASSWORD: KJKszpj
+      MYSQL_ROOT_PASSWORD: KJKszpj
     ports:
       - "33069:3306"
     volumes:
