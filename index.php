@@ -12,10 +12,21 @@ error_reporting(E_ALL);
 
 
 try {
-   require_once APP_DIR . 'index.php';
+    require_once BASE_DIR . '/configs/DB.php';
+    require_once APP_DIR . 'index.php';
 
+
+    $query = 'SELECT * FROM content';
+    $query = DB::connect()->prepare($query);
+    $query -> execute();
+    dd($query->fetchAll());
     require_once BASE_DIR . '/configs/router.php';
 
-} catch (Exception $exception) {
-    d($exception ->getCode() . ' - "' . $exception->getMessage() . '"');
+} catch (PDOException $exception) {
+    d('PDOException');
+    dd($exception ->getCode() . ' - "' . $exception->getMessage() . '"');
+}
+
+catch (Exception $exception) {
+    dd($exception ->getCode() . ' - "' . $exception->getMessage() . '"');
 }

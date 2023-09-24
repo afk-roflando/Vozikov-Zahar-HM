@@ -21,7 +21,7 @@ services:
       - php_kek
 
   base:
-    image: "mysql:8"
+    image: 'mysql:8'
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: KJKszpj
