@@ -1,10 +1,15 @@
+
 <section id="banner">
     <div class="container">
         <div class="row">
             <div class="col-12 col-md-9 col-xl-6 banner-content">
-                <p>best pc store</p>
-                <h3>If you want a computer click here</h3>
-                <a href="#" class="btn btn-outline-primary border-bottom">BUY NOW</a>
+                <p><?=$content['banner']['title'] ?? ''  ?></p>
+                <h3><?=$content['banner']['subtitle'] ?? ''  ?></h3>
+                <?php if ($content['banner']['link']): ?>
+                <a href="<?= $content['banner']['link']['href'] ?>"
+                   class="btn btn-outline-primary border-bottom"
+                ><?= $content['banner']['link']['title'] ?></a>
+                <?php endif;?>
             </div>
         </div>
     </div>

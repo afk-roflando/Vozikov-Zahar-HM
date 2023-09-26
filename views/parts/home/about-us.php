@@ -1,4 +1,4 @@
-
+<?php $about_us = $content['about_us'] ?? []; ?>
 <section id="about-us" class="section-gap">
     <div class="container">
         <div class="row">
@@ -9,10 +9,10 @@
                 </a>
             </div>
             <div class="col-ms-12 col-md-6 description-block d-flex flex-column align-items-start justify-content-center">
-                <h6>Assembling a personal computer</h6>
-                <h1>We show you how your device is assembled</h1>
-                <p class="kek"><b>We want to hear your opinion</b></p>
-                <p>We care about our customer and want you to be confident in us</p>
+                <h6><?=$about_us['text']['title'] ?? '' ?></h6>
+                <h1><?=$about_us['text']['subtitle'] ?? '' ?></h1>
+                <p class="kek"><b><?=$about_us['text']['quote'] ?? '' ?></b></p>
+                <p><?=$about_us['text']['description'] ?? '' ?></p>
                 <img class="kek2" src="img/17656284_image9.gif" >
             </div>
         </div>

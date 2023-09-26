@@ -1,10 +1,10 @@
-
+<?php $catalog =$content['catalog']; ?>
 <section id="Computer" class="section-gap">
     <div class="container">
         <div class="row title-row">
             <div class="col-12">
-                <h1><b>What computers do we have</b></h1>
-                <p><b>For those who value quality</b></p>
+                <h1><b><?=$catalog['title'] ?? ''?></b></h1>
+                <p><b><?=$catalog['description'] ?? ''?></b></p>
             </div>
         </div>
         <div class="row">

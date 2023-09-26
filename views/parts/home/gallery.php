@@ -1,10 +1,11 @@
+<?php $content ['gallery'] ?>
 
 <section id="gallery" class="section-gap">
     <div class="container">
         <div class="row title-row">
             <div class="col-12">
-                <h1><b>Our photos</b></h1>
-                <p><b>Beauty and only</b></p>
+                <h1><b><?=$gallery['title'] ?? '' ?></b></h1>
+                <p><b><?=$gallery['description'] ?? '' ?></b></p>
             </div>
             <div class="row row-cols-2">
                 <div class="col-12 col-md-4">

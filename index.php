@@ -15,11 +15,8 @@ try {
     require_once BASE_DIR . '/configs/DB.php';
     require_once APP_DIR . 'index.php';
 
+    $commonBlocks = getContent('name IN ("navigation", "footer")');
 
-    $query = 'SELECT * FROM content';
-    $query = DB::connect()->prepare($query);
-    $query -> execute();
-    dd($query->fetchAll());
     require_once BASE_DIR . '/configs/router.php';
 
 } catch (PDOException $exception) {
