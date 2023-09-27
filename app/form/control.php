@@ -2,6 +2,6 @@
 
 match (getRequestType()){
     'register' => createUserHandler(createUserParams()),
-    'login' => '',
+    'login' => authUserHandler(authUserParams()),
     default => redirectBack()
 };

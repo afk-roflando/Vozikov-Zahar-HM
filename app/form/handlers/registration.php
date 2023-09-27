@@ -11,7 +11,7 @@ function createUserHandler(array $fields): void
 
 
     $query->execute($fields);
-    FlushSessionByKey(SESSION_KEYS::REGISTER);
+    flushSessionByKey(SESSION_KEYS::REGISTER);
     redirect('/login');
 
 
