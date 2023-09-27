@@ -20,7 +20,7 @@
                     <?php if($commonBlocks['navigation']['logo']): ?>
                          <a href="/"
                             class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-                             <img width="110" src="<?= IMAGES_URI ?><?=$commonBlocks['navigation']['logo'] ?>" alt="logo">
+                             <img width="110" src="img/logo%202.0.png" alt="logo">
                          </a>
                     <?php endif; ?>
 
@@ -31,6 +31,15 @@
                                  <a href="<?= $link ['href'] ?>" class="nav-link" aria-current="page"><?= $link ['title'] ?></a>
                              </li>
                              <?php endforeach; ?>
+                             <li class="nav-item">
+                                 <a href="/login" class="nav-link" aria-current="page">Sign in</a>
+                             </li>
+                             <li class="nav-item">
+                                 <span class="nav-link disabled">|</span>
+                             </li>
+                             <li class="nav-item">
+                                 <a href="/register" class="nav-link" aria-current="page">Sign up</a>
+                             </li>
                          </ul>
                     <?php endif; ?>
                 </header>
