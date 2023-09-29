@@ -17,6 +17,11 @@ switch (getUrl()){
         removeUser();
         redirect();
         break;
+    case 'admin/dashboard':
+        conditionRedirect(!isAdmin());
+        require ADMIN_PAGE_DIR . '/products/dashboard.php';
+        break;
+
     default:
         throw new Exception(getUrl() . '-not found', 404);
 }
